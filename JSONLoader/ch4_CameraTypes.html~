@@ -175,10 +175,10 @@ function load(datastuff){
 
 var loader = new THREE.JSONLoader();
 
-loader.load( "trytry1.js", function( geometry ) {
-    var material = new THREE.MeshBasicMaterial( {
-        vertexColors : THREE.FaceColors,
-    });
+    loader.load(datastuff, function( geometry ) {
+        var material = new THREE.MeshBasicMaterial( {
+           color: 0x00ffff, wireframe: false
+        });
 
         var mesh = new THREE.Mesh( geometry, material );
         scene.add( mesh );
